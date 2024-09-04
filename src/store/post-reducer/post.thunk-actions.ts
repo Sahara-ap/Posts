@@ -57,13 +57,12 @@ export const updatePostThunkAction = createAsyncThunk(
       .then((res) => {
         const state = getState() as TRootState;
         const postIndex = state.postReducer.posts.findIndex((post) => post.id === res.id);
-        let updatedPosts: IPostResponse[] = [];
+        const copy =  state.postReducer.posts.slice();
         if (postIndex) {
-          updatedPosts = state.postReducer.posts
-            .slice()
-            .splice(postIndex, 1, res);
+          copy.splice(postIndex, 1, res);
         }
-        return updatedPosts ;
+        notifySuccess('Your post was successfully updated')
+        return copy;
       })
       .catch((error) => {
         notifyError("Sorry can't handle your request at this moment");
@@ -82,13 +81,11 @@ export const deletePostThunkAction = createAsyncThunk(
       .then(() => {
         const state = getState() as TRootState;
         const postIndex = state.postReducer.posts.findIndex((post) => post.id === postId);
-        let updatedPostsWithDeleting: IPostResponse[] = [];
+        const copy =  state.postReducer.posts.slice();
         if (postIndex) {
-          updatedPostsWithDeleting = state.postReducer.posts
-            .slice()
-            .splice(postIndex, 1);
+          copy.splice(postIndex, 1);
         }
-        return updatedPostsWithDeleting ;
+        return copy;
       })
       .catch((error) => {
         notifyError("Sorry can't handle your request at this moment");
