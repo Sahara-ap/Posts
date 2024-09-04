@@ -4,7 +4,7 @@ import { requestAllPosts, requestPost, requestPostCreating, requestPostDeleting,
 import { IPostRequestBody } from 'store/api/types/post-request-body.interface';
 import { IPostResponse } from 'store/api/types/post-response.interface';
 import { TRootState } from 'store/store';
-import { notifyError } from 'utils/notify/notify.utils';
+import { notifyError, notifySuccess } from 'utils/notify/notify.utils';
 
 export const fetchAllPostsThunkAction = createAsyncThunk(
   'posts/fetchAll',
@@ -32,9 +32,13 @@ export const fetchPostThunkAction = createAsyncThunk(
 
 export const createPostThunkAction = createAsyncThunk(
   'posts/createOne',
-  async (body: IPostRequestBody): Promise<IPostResponse> => {
+  async ({body, onSuccessCb}: {body:IPostRequestBody, onSuccessCb: () => void}): Promise<IPostResponse> => {
     return await requestPostCreating(body)
-      .then((res) => (res))
+      .then((res) => {
+        onSuccessCb();
+        notifySuccess("Your post was successfully created")
+        return res;
+      })
       .catch((error) => {
         notifyError("Sorry can't handle your request at this moment");
         throw error;

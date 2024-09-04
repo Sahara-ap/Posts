@@ -1,24 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-import { useAppDispatch } from 'store/store';
-import { fetchAllPostsThunkAction } from 'store/post-reducer/post.thunk-actions';
-import { useSelector } from 'react-redux';
-import {
-  selectAllPosts,
-} from 'store/post-reducer/post.selectors';
 import { Post } from './components/Post';
 
 import S from './PageMain.module.css';
+import { IPostResponse } from 'store/api/types/post-response.interface';
 
-export const PageMain: React.FC = () => {
-  const dispatch = useAppDispatch();
-  const posts = useSelector(selectAllPosts);
-  console.log('posts', posts);
-
-
-  useEffect(() => {
-    dispatch(fetchAllPostsThunkAction());
-  }, [dispatch]);
+interface IPostsPageMainProps {
+  posts: IPostResponse[];
+}
+export const PageMain: React.FC<IPostsPageMainProps> = ({posts}) => {
 
   return (
     <div className={S.wrapper}>

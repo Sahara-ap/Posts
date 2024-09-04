@@ -1,4 +1,88 @@
 .wrapper {
+  margin: 0 auto;
   display: flex;
-  
+  max-width: 1200px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
+  height: 100vh;
+}
+
+.title {
+  font-size: 60px;
+  line-height: 70px;
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+}
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: calc(100vh / 2);
+  width: calc(100vw * 0.55);
+  padding: 30px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+.titleField {
+  font-size: 30px;
+  padding: 8px 16px;
+  background-color: #dbdbde;
+  word-break: break-all;
+  border: 1px solid #000;
+}
+
+.titleField:focus::placeholder {
+  opacity: 0;
+}
+
+.textField {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.textField:focus::placeholder {
+  opacity: 0;
+}
+
+.sendButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 12px;
+  border: none;
+  border-radius: 16px;
+  background-color: transparent;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+
+  gap: 2px;
+  padding: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #24B2D1;
+}
+
+.sendButton:hover {
+  color: #6a96f6;
+
 }
