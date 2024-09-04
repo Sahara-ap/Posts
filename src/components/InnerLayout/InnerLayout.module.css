@@ -5,7 +5,6 @@
   align-items: center;
   width: 100%;
   max-width: 1600px;
-  height: 100%;
 }
 
 header {
@@ -35,12 +34,17 @@ header {
 
 main {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
   flex: 1 0;
   flex-direction: column;
   width: 100%;
   margin-top: 70px;
   background-color: #f4f4f7;
   word-break: break-all;
+  height: auto;
+  min-height: auto;
+  padding-bottom: 60px;
 }
 
 @media (max-width: 767px) {
