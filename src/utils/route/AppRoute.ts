@@ -1,5 +1,5 @@
 export const AppRoute = {
-  Home: (): string => '/',
-  PostPage: (postId:number): string => `/post/:${postId}`,
-  PostCreatingPage: (): string => '/create',
+  Main: (): string => '/',
+  Content: (postId?:number): string => `/post/:${postId}`,
+  PostCreating: (): string => '/create',
 } as const;

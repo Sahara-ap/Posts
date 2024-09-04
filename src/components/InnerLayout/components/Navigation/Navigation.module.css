@@ -1,0 +1,21 @@
+.navWrapper {
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .navWrapper {
+    width: 100%;
+    padding-top: 0;
+    padding-left: 0;
+  }
+}
+
+.navList{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-right: 30px;
+  gap: 4px;
+  width: 100%;
+}

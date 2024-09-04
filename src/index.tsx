@@ -5,8 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { App } from './App';
 import { store } from 'store/store';
-import { ResetStyles } from 'styles/ResetStyles';
-import { GlobalStyles } from 'styles/GlobalStyles';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -17,8 +15,6 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ResetStyles />
-      <GlobalStyles />
       <BrowserRouter>
         <App />
       </BrowserRouter>
