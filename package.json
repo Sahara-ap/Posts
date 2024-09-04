@@ -1,0 +1,62 @@
+{
+  "name": "blog-poidich",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@reduxjs/toolkit": "1.9.5",
+    "axios": "^1.6.8",
+    "dayjs": "^1.11.11",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "8.1.3",
+    "react-router-dom": "6.14.0",
+    "react-helmet-async": "^1.3.0",
+    "react-scripts": "5.0.1",
+    "react-toastify": "9.1.3",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.68",
+    "@types/react": "^18.2.43",
+    "@types/react-datepicker": "^6.2.0",
+    "@types/react-dom": "^18.2.17",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-config-htmlacademy": "^9.1.1",
+    "eslint-plugin-react-refresh": "0.4.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "postcss-styled-syntax": "^0.5.0",
+    "prettier": "^3.1.1",
+    "prop-types": "^15.8.1",
+    "stylelint": "^16.0.2",
+    "stylelint-config-recess-order": "^4.4.0",
+    "stylelint-config-standard": "^35.0.0",
+    "webpack": "^5.89.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false --detectOpenHandles",
+    "eject": "react-scripts eject",
+    "stylelint": "stylelint \"**/*.styled.(ts|tsx)\"",
+    "stylelint:fix": "stylelint --fix \"**/*.styled.(ts|tsx)\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
