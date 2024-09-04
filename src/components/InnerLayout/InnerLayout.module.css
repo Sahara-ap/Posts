@@ -2,7 +2,6 @@
   display: flex;
   flex: 1 0;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   max-width: 1600px;
 }
@@ -33,9 +32,10 @@ header {
 }
 
 main {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: stretch;
+  /* justify-content: center; */
+  /* align-items: center; */
   flex: 1 0;
   flex-direction: column;
   width: 100%;

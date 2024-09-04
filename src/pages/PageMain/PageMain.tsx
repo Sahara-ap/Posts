@@ -30,23 +30,25 @@ export const PageMain: React.FC<IPostsPageMainProps> = ({ posts }) => {
   };
 
   return (
-    <div className={S.wrapper}>
-      <h1 className={S.title}>Список статей</h1>
-      <ul className={S.postList}>
-        {shownPosts.map((post) => (
-          <Post
-            key={post.id}
-            postId={post.id}
-            text={post.title}
-            onClick={handleDeleteButtonClick}
-          />
-        ))}
-      </ul>
+    <>
+      <div className={S.wrapper}>
+        <h1 className={S.title}>Список статей</h1>
+        <ul className={S.postList}>
+          {shownPosts.map((post) => (
+            <Post
+              key={post.id}
+              postId={post.id}
+              text={post.title}
+              onClick={handleDeleteButtonClick}
+            />
+          ))}
+        </ul>
+      </div>
       {isMoreButtonVisible && (
         <button className={S.more} onClick={handleMoreClick}>
           Еще
         </button>
       )}
-    </div>
+    </>
   );
 };
