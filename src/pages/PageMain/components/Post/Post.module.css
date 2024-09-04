@@ -1,0 +1,16 @@
+.postElement {
+  text-decoration: none;
+  box-shadow: 0px 1px 1px grey ;
+}
+
+.link {
+  display: block;
+  padding: 5px 7px;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #dbdbde;
+}

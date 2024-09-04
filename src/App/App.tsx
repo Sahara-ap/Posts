@@ -11,7 +11,7 @@ export const App: React.FC = () => {
     <Routes>
       <Route path={AppRoute.Main()} element={<InnerLayout />}>
         <Route index element={<PageMain />} />
-        <Route path={AppRoute.Content()} element={<PageContent />} />
+        <Route path={`${AppRoute.Content()}/:postId`} element={<PageContent />} />
         <Route path={AppRoute.PostCreating()} element={<PagePostCreating />} />
       <Route path="*" element={<Navigate to={AppRoute.Main()} />} />
       </Route>

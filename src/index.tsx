@@ -5,6 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { App } from './App';
 import { store } from 'store/store';
+import { ToastProvider } from 'components/ToastProvider';
+
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -16,7 +18,9 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
+      <ToastProvider>
         <App />
+      </ToastProvider>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,
